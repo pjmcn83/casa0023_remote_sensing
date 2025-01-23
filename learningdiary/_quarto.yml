@@ -1,0 +1,22 @@
+project:
+  type: book
+
+book:
+  title: "CASA0023 Remote Sensing - Learning Diary"
+  author: "Paul McNicholas"
+  date: "01/21/2025"
+  chapters:
+    - index.qmd
+    - 1_Intro_to_RS.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

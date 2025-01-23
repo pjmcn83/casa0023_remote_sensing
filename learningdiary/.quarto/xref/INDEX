@@ -1,0 +1,26 @@
+{
+  "index.qmd": {
+    "index.html": "c857a41b"
+  },
+  "intro.qmd": {
+    "intro.html": "65d838dd"
+  },
+  "summary.qmd": {
+    "summary.html": "e746b057"
+  },
+  "references.qmd": {
+    "references.html": "9550d449"
+  },
+  "0_Personal_intro.qmd": {
+    "0_Personal_intro.html": "170421ac"
+  },
+  "1_Introduction_RS.qmd": {
+    "1_Introduction_RS.html": "5c4faaf0"
+  },
+  "Welcome.qmd": {
+    "Welcome.html": "883776ce"
+  },
+  "1_Intro_to_RS.qmd": {
+    "1_Intro_to_RS.html": "8df4d4e2"
+  }
+}
