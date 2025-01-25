@@ -10,13 +10,13 @@ book:
     - 1_Intro_to_RS.qmd
     - references.qmd
 
-bibliography: references.bib
+bibliography: pleiades_references.bib
 
 format:
   html:
     theme: cosmo
+    lightbox: true
   pdf:
     documentclass: scrreprt
-
+    
 editor: visual
-
