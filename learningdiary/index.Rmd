@@ -11,10 +11,10 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-#bibliography: pleiades_references.bib
+bibliography: pleiades_references.bib
 
 ---
-```{r, eval=FALSE, echo=TRUE}
+```{r, eval=TRUE, echo=FALSE}
 library(RefManageR)
 
 BibOptions(check.entries = FALSE,
@@ -24,15 +24,13 @@ BibOptions(check.entries = FALSE,
            hyperlink = TRUE,
            dashed = FALSE,
            no.print.fields=c("doi", "url", "urldate", "issn"))
-myBib <- ReadBib("C:/UCL/CASA0023 RS/references.bib", check = FALSE)
+myBib <- ReadBib("./pleiades_references.bib", check = FALSE)
 
 library(knitcitations)
 ```
 
 # Pléiades Neo Overview
 .pull-left[
-`r knitcitations::citep(myBib,"knuth84")`
-
 Pléiades Neo is actually a constellation of two* identical satellites
   - Pléiades Neo 3 launched 28th April 2021 
   - Pléiades Neo 4 launched 16th August 2021
@@ -43,8 +41,6 @@ Part of European Space Agency's third party missions
 ]
 .pull-right[
 Capacity to capture up to 1 million km2 of imagery per day
-
-
 
 ```{r echo=FALSE, out.width='75%', fig.align='center'}
 knitr::include_graphics('C:/UCL/CASA0023 RS/casa0023_remote_sensing/learningdiary/images/pleiades_neo_background.png')
@@ -157,5 +153,9 @@ However, whilst increased spatial resolution is no doubt a good thing in certain
 
 There is work ongoing that aims to make higher resolution imagery more accessible, particularly in UK Local Government, so we could be seeing a shift to more EO based decision making in Local Government in the coming years. Although access to data is one thing and possessing and implementing the skills to effectively make use of this is another issue entirely.
 
-
 ---
+
+#References
+```{r, results='asis', echo=FALSE}
+PrintBibliography(myBib)
+```
