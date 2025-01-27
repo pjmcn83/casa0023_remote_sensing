@@ -25,19 +25,12 @@ class: center, middle, inverse, title-slide
 ### UCL CASA
 ]
 .date[
-### 2025/01/21 (updated: 2025-01-25)
+### 2025/01/21 (updated: 2025-01-26)
 ]
 
 ---
 
 
-```
-## Warning: package 'RefManageR' was built under R version 4.4.2
-```
-
-```
-## Warning: package 'knitcitations' was built under R version 4.4.2
-```
 
 # Pléiades Neo Overview
 .pull-left[
@@ -52,15 +45,15 @@ Part of European Space Agency's third party missions
 .pull-right[
 Capacity to capture up to 1 million km2 of imagery per day
 
-&lt;img src="images/pleiades_neo_background.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;img src="./images/pleiades_neo_background.png" width="75%" style="display: block; margin: auto;" /&gt;
 ]
 
 .footnote[\* there are conflicting articles  @eoportal2023 stating Pléiades Neo is actually a constellation of 4 satellites, however the official Airbus and European Space Agency websites state only 2 satellites]
 ---
-class: center, middle
 
 #Technical Specification
 
+.pull-left[
 |   |   |
 |---|---|
 |Provider| Airbus Defence and Space |
@@ -76,7 +69,22 @@ class: center, middle
 |Coverage| 500 million sq km per day per satellite |
 |Altitude| 620km |
 |   |   |
+]
 
+.pull-right[
+__Constraints of hi-res sensors__
+
+Increased cost of capture and file size leading to increased storage and prcoessing costs.
+
+Swath width of hi-res sensor is smaller meaning more passes of the Earth are required to capture the same area which further increases costs.
+
+| Sensor | Resolution | Swath Width |
+|---|---|---|
+|Pleiades Neo | Up to 0.3m |14km |
+|Landsat-8 | Up to 15m | 185km |
+|Sentinel 2 | Up to 10m | 185km |
+@sce2022
+]
 ---
 
 # Use Cases
@@ -88,7 +96,9 @@ class: center, middle
 - Forestry
 - Environmental Monitoring
 
-There are many use cases for Pléiades Neo as shown above. I could just use sample images from the AirBus or ESA's website however in my work at London Borough of Camden we were lucky enough to take part in an EO Pilot scheme for the Public Sector which included access the Pleiades Neo images. 
+There are many use cases for Pléiades Neo as shown above. 
+
+These could be reviewed using sample images from the AirBus or ESA's website however in my work at London Borough of Camden we were lucky enough to take part in an EO Pilot scheme for the Public Sector which included access the Pleiades Neo images.
 
 Therefore I can instead talk specifically about the Camden use case which looked at vegetation health. 
 
@@ -97,23 +107,37 @@ Therefore I can instead talk specifically about the Camden use case which looked
 # Vegetation Health 1
 
 .pull-left[
-&lt;img src="images/pleiades_rgb.png" width="100%" /&gt;
+A simple RGB image to demonstrate the level of resolution available from Pléiades Neo.
+
+Individual trees are clearly visible and when zooming in vehicles are also identifiable demostrating the power of the sensor.
+
+&lt;img src="./images/pleiades_rgb.png" width="100%" /&gt;
 ]
 .pull-right[
-&lt;img src="images/pleiades_NIR_EIR_DeepBlue.png" width="100%" /&gt;
+We then produce an image using the Near-infrared, Edge-infrared and Deep Blue bands.
+
+This helped to really highlight where vegetation is (yellows and greens) against the more urban areas (blue).  Smaller trees are now also idenitfiable that weren't clearly visible in the RGB image.
+
+&lt;img src="./images/pleiades_NIR_EIR_DeepBlue.png" width="100%" /&gt;
 ]
+
+These images were useful for identification purposes however the issues we faced even at this level were due to technological constraints of hosting the data on shared drives and across networks.  Plus the computational power of the machines used were not ideal as processing was very slow. 
 ---
 
 # Vegetation Health 2
 
-Camden then produced a Normalised Difference Vegetation Index (NDVI) to understand vegetation health of the Borough.
+The next step was to produce and compare a Normalised Difference Vegetation Index (NDVI) to understand vegetation health of the Borough between the two latest years available to us.
 
 .pull-left[
-&lt;img src="images/ndvi2022.png" width="100%" /&gt;
-]
+&lt;img src="./images/ndvi2022.png" width="100%" /&gt;
+NDVI image 2022]
 .pull-right[
-&lt;img src="images/ndvi2023.png" width="100%" /&gt;
-]
+&lt;img src="./images/ndvi2023.png" width="100%" /&gt;
+NDVI image 2023]
+
+This allowed us to compare between the two years and see a clear drop in the vegetation health in the second year.
+
+There could be a multitude of factors that caused this drop but these were not investigated as the main purpose of the pilot was to identify potential use cases rather than full analysis.
 
 ---
 
@@ -139,7 +163,7 @@ AirBus and others continue to push commercial EO capabilities with higher resolu
 ]
 
 .pull-right[
-&lt;img src="images/sensors_per_res_chart.jpg" width="100%" /&gt;
+&lt;img src="./images/sensors_per_res_chart.jpg" width="100%" /&gt;
 ]
 ---
 
