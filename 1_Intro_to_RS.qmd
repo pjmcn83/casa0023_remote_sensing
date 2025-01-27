@@ -18,7 +18,7 @@ Whilst many of the use cases available are fascinating, as this is an introducti
 
 Despite the many variables in sensor technology it is possible to compare imagery from Landsat-8 and Sentinel-2 due to an overlap in the bands captured by each. @mandanici2016 prepared an initial comparison approximately a year after Sentinel-2 was launched in 2015. Landsat-8 was launched in 2013.
 
-Mandanici and Bitelli begin with a basic summary of the sensor which provides useful context for their comparison which summarised in table 1.
+Mandanici and Bitelli begin with a basic summary of the sensor which provides useful context for their comparison which summarised in @tbl-landsat_sentinel_comparison.
 
 ```{r include=FALSE}
 library(tidyverse)
@@ -37,7 +37,7 @@ comp <- read.csv(here("tables", "landsat_sentinel_comparison.csv"), check.names 
 ```
 
 ```{r echo=FALSE}
-#| label: tbl-summary
+#| label: tbl-landsat_sentinel_comparison
 #| tbl-cap: "Summary comparison of basic Landsat-8 and Sentinel-2 specifications"
 comp
 ```

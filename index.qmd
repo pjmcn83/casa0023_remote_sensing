@@ -4,7 +4,7 @@ This is my learning diary for the CASA0023 Remotely Sensing Cities an Environmen
 
 ## Personal Introduction
 
-Hi! I'm Paul and I am a part-time degree apprenticeship student. I have a strong GIS background spanning nearly 20 years but with very little working experience with remote sensing.  
+Hi! I'm Paul and I am a part-time degree apprenticeship student. I have a strong GIS background spanning nearly 20 years but with very little working experience with remote sensing.
 
 Most of my working life spent has been in Local Government and I am currently the GIS Administrator for the London Borough of Camden. I have predominantly used proprietary GIS software such as MapInfo, ArcGIS and Cadcorp. In more recent years I have also been using QGIS.
 
