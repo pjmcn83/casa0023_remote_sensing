@@ -7,7 +7,7 @@ Our main task this week was to build a presentation in Xarigan about a specific 
 I choose to create my presentation on the commercial satellite, Pleiades Neo, as I have a working knowledge of the imagery produced.
 
 ```{r}
-xaringanExtra::embed_xaringan(url = "URL of your presentation",
+xaringanExtra::embed_xaringan(url = "https://github.com/pjmcn83/casa0023_remote_sensing/blob/9b7de1c42cd4c8af1c0147f361ecd5d30ef66018/2_portfolio.html",
                               ratio = "16:9")
 ```
 
