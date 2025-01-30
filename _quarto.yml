@@ -8,6 +8,8 @@ book:
   chapters:
     - index.qmd
     - 1_Intro_to_RS.qmd
+    - 2_portfolio.qmd
+    - 3_Data_Corrections.qmd
     - references.qmd
 
 bibliography: pleiades_references.bib

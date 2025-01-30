@@ -25,7 +25,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Tempfli, Klaus, G. C. Huurneman, Wim Bakker, L. L. F. Janssen, W. F.\nFeringa, Ambro Gieske, K. A. Grabmaier, et al. 2009. “Principles\nof Remote Sensing : An Introductory Textbook.” In."
+    "text": "Carrasco, Luis, Aneurin W. O’Neil, R. Daniel Morton, and Clare S.\nRowland. 2019. “Evaluating Combinations of Temporally Aggregated\nSentinel-1, Sentinel-2 and Landsat 8 for Land Cover Mapping with Google\nEarth Engine.” Remote Sensing 11 (3): 288. https://doi.org/10.3390/rs11030288.\n\n\nMandanici, Emanuele, and Gabriele Bitelli. 2016. “Preliminary\nComparison of Sentinel-2 and Landsat 8 Imagery for a Combined\nUse.” Remote Sensing 8 (12): 1014. https://doi.org/10.3390/rs8121014.\n\n\nNasiri, Vahid, Azade Deljouei, Fardin Moradi, Seyed Mohammad Moein\nSadeghi, and Stelian Alexandru Borz. 2022. “Land Use and Land\nCover Mapping Using Sentinel-2, Landsat-8 Satellite Images, and Google\nEarth Engine: A Comparison of Two Composition Methods.”\nRemote Sensing 14 (9): 1977. https://doi.org/10.3390/rs14091977."
   },
   {
     "objectID": "1_Introduction_RS.html#summary",
@@ -110,5 +110,19 @@
     "title": "1  Wk 1 Introduction to Remote Sensing",
     "section": "1.3 Reflection",
     "text": "1.3 Reflection\nBoth articles discussed in Section 1.2 provide a good overview of both Landsat-8 and Sentinel-2 which helps to consolidate some of the topics taught in class this week. Especially in relation to how different bands can be used for different purposes. This will be extremely useful in the coming months as we look at our own analysis in this course and in CASA0025, but also as part of work as we begin to use a new Earth Observation Data Hub.\nSome of the methodology of both papers is still difficult for me to process, particularly around the specific analysis and calculations, but hopefully this is because it is still the first week of remote sensing. However reading these articles really helped my understanding of the use cases of both satellites and specifically their similiarities and importantly how the spectral resolution of the same bands have slight variations to be aware of. Also understanding how bands, can be combined in different ways and in different applications to produce similar images for analysis. This then helps to provide even more comparable images across a larger temporal scale as any gaps in imagery (possibly due to constraints such as scattering and in particular cloud cover) from one satellite may be able to be filled by the other.\nAnother topic I would have liked to explore is the effect that different types of scattering has on the images captured and how any pre-processing by the agencies responsible for the data affects the images that we see.\n\n\n\n\nCarrasco, Luis, Aneurin W. O’Neil, R. Daniel Morton, and Clare S. Rowland. 2019. “Evaluating Combinations of Temporally Aggregated Sentinel-1, Sentinel-2 and Landsat 8 for Land Cover Mapping with Google Earth Engine.” Remote Sensing 11 (3): 288. https://doi.org/10.3390/rs11030288.\n\n\nMandanici, Emanuele, and Gabriele Bitelli. 2016. “Preliminary Comparison of Sentinel-2 and Landsat 8 Imagery for a Combined Use.” Remote Sensing 8 (12): 1014. https://doi.org/10.3390/rs8121014.\n\n\nNasiri, Vahid, Azade Deljouei, Fardin Moradi, Seyed Mohammad Moein Sadeghi, and Stelian Alexandru Borz. 2022. “Land Use and Land Cover Mapping Using Sentinel-2, Landsat-8 Satellite Images, and Google Earth Engine: A Comparison of Two Composition Methods.” Remote Sensing 14 (9): 1977. https://doi.org/10.3390/rs14091977."
+  },
+  {
+    "objectID": "3_Data_Corrections.html",
+    "href": "3_Data_Corrections.html",
+    "title": "3  Wk 3 Remote Sensing Data and Corrections",
+    "section": "",
+    "text": "This week we discussed how to build our online portfolio using Quarto (web page) and Xarigan (presentation). This also included how to host pages through GitHub.\nOur main task this week was to build a presentation in Xarigan about a specific remote sensing satelitte.\nI choose to create my presentation on the commercial satellite, Pleiades Neo, as I have a working knowledge of the imagery produced."
+  },
+  {
+    "objectID": "2_portfolio.html",
+    "href": "2_portfolio.html",
+    "title": "2  Wk 2 Portfolio",
+    "section": "",
+    "text": "This week we discussed how to build our online portfolio using Quarto (web page) and Xarigan (presentation). This also included how to host pages through GitHub.\nOur main task this week was to build a presentation in Xarigan about a specific remote sensing satelitte.\nI choose to create my presentation on the commercial satellite, Pleiades Neo, as I have a working knowledge of the imagery produced.\n\nxaringanExtra::embed_xaringan(url = \"https://github.com/pjmcn83/casa0023_remote_sensing/blob/9b7de1c42cd4c8af1c0147f361ecd5d30ef66018/2_portfolio.html\",\n                              ratio = \"16:9\")"
   }
 ]
