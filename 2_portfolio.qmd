@@ -1,13 +1,12 @@
 # Wk 2 Portfolio
 
-This week we discussed how to build our online portfolio using Quarto (web page) and Xarigan (presentation).  This also included how to host pages through GitHub.
+This week we discussed how to build our online portfolio using Quarto (web page) and Xarigan (presentation). This also included how to host pages through GitHub.
 
 Our main task this week was to build a presentation in Xarigan about a specific remote sensing satelitte.
 
 I choose to create my presentation on the commercial satellite, Pleiades Neo, as I have a working knowledge of the imagery produced.
 
 ```{r}
-xaringanExtra::embed_xaringan(url = "https://github.com/pjmcn83/casa0023_remote_sensing/blob/9b7de1c42cd4c8af1c0147f361ecd5d30ef66018/2_portfolio.html",
+xaringanExtra::embed_xaringan(url = "https://github.com/pjmcn83/casa0023_remote_sensing/blob/585d34958ad4a565c9befec227e2597271224d42/wk2pres.rmd",
                               ratio = "16:9")
 ```
-

@@ -1,6 +1,6 @@
 ---
 title: "Pleiades Neo"
-subtitle: "<br/>with xaringan"
+#subtitle: "<br/>with xaringan"
 author: "Paul McNicholas"
 institute: "UCL CASA"
 date: "2025/01/21 (updated: `r Sys.Date()`)"
@@ -47,7 +47,7 @@ knitr::include_graphics('./images/pleiades_neo_background.png')
 ```
 ]
 
-.footnote[\* there are conflicting articles  @eoportal2023 stating Pléiades Neo is actually a constellation of 4 satellites, however the official Airbus and European Space Agency websites state only 2 satellites]
+.footnote[\* there are conflicting articles  `r Citet(myBib, "eoportal2023")` stating Pléiades Neo is actually a constellation of 4 satellites, however the official Airbus and European Space Agency websites state only 2 satellites]
 ---
 
 #Technical Specification
@@ -73,7 +73,7 @@ knitr::include_graphics('./images/pleiades_neo_background.png')
 .pull-right[
 __Constraints of hi-res sensors__
 
-Increased cost of capture and file size leading to increased storage and prcoessing costs.
+Increased cost of capture and file size leading to increased storage and processing costs.
 
 Swath width of hi-res sensor is smaller meaning more passes of the Earth are required to capture the same area which further increases costs.
 
@@ -82,7 +82,7 @@ Swath width of hi-res sensor is smaller meaning more passes of the Earth are req
 |Pleiades Neo | Up to 0.3m |14km |
 |Landsat-8 | Up to 15m | 185km |
 |Sentinel 2 | Up to 10m | 185km |
-@sce2022
+`r Citet(myBib, "sce2022")`
 ]
 ---
 
@@ -108,7 +108,7 @@ Therefore I can instead talk specifically about the Camden use case which looked
 .pull-left[
 A simple RGB image to demonstrate the level of resolution available from Pléiades Neo.
 
-Individual trees are clearly visible and when zooming in vehicles are also identifiable demostrating the power of the sensor.
+Individual trees are clearly visible and when zooming in vehicles are also identifiable demonstrating the power of the sensor.
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('./images/pleiades_rgb.png')
@@ -117,7 +117,7 @@ knitr::include_graphics('./images/pleiades_rgb.png')
 .pull-right[
 We then produce an image using the Near-infrared, Edge-infrared and Deep Blue bands.
 
-This helped to really highlight where vegetation is (yellows and greens) against the more urban areas (blue).  Smaller trees are now also idenitfiable that weren't clearly visible in the RGB image.
+This helped to really highlight where vegetation is (yellows and greens) against the more urban areas (blue).  Smaller trees are now also identifiable that weren't clearly visible in the RGB image.
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('./images/pleiades_NIR_EIR_DeepBlue.png')
@@ -166,7 +166,7 @@ Few details are currently available but it Will provide native 20cm resolution i
 To launch in next few years and continue till at least 2040.
 
 ----
-AirBus and others continue to push commercial EO capabilities with higher resolution capture.  This be seen by looking at the increase in high resolution sensors that are in orbit @belward2015.
+AirBus and others continue to push commercial EO capabilities with higher resolution capture.  This be seen by looking at the increase in high resolution sensors that are in orbit `r Citet(myBib, "belward2015")`
 ]
 
 .pull-right[
@@ -187,6 +187,6 @@ There is work ongoing that aims to make higher resolution imagery more accessibl
 ---
 
 #References
-```{r, results='asis', echo=FALSE}
+```{r, results='asis', eval=FALSE, echo=FALSE}
 PrintBibliography(myBib)
 ```
