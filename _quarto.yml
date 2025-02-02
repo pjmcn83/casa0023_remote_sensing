@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: _book
+  output-dir: docs
 
 book:
   title: "CASA0023 Remote Sensing - Learning Diary"
@@ -22,7 +22,6 @@ format:
   html:
     theme: cosmo
     lightbox: true
-  code-link: true
   
   pdf:
     documentclass: scrbook
