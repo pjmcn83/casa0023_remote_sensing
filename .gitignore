@@ -51,4 +51,4 @@ rsconnect/
 # user defined ignores
 */data/
 
-/.quarto/
+#/.quarto/
