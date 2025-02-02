@@ -12,6 +12,7 @@ book:
     - 2_portfolio.qmd
     - 3_Data_Corrections.qmd
     - references.qmd
+  reader-mode: true
 
 bibliography: 
   - references.bib
@@ -21,7 +22,9 @@ format:
   html:
     theme: cosmo
     lightbox: true
+  code-link: true
+  
   pdf:
-    documentclass: scrreprt
+    documentclass: scrbook
     
 editor: visual
