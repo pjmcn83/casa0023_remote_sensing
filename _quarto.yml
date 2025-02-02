@@ -21,4 +21,8 @@ format:
   pdf:
     documentclass: scrreprt
     
+project:
+  type: book
+  output-dir: _book
+    
 editor: visual
