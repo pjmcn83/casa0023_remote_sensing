@@ -1,0 +1,20 @@
+{
+  "hash": "45d42dbcea40c70f1d2b32768b9888ad",
+  "result": {
+    "markdown": "# Wk 2 Portfolio\n\nThis week we discussed how to build our online portfolio using Quarto (web page) and Xarigan (presentation).  This also included how to host pages through GitHub.\n\nOur main task this week was to build a presentation in Xarigan about a specific remote sensing satelitte.\n\nI choose to create my presentation on the commercial satellite, Pleiades Neo, as I have a working knowledge of the imagery produced.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nxaringanExtra::embed_xaringan(url = \"https://github.com/pjmcn83/casa0023_remote_sensing/blob/9b7de1c42cd4c8af1c0147f361ecd5d30ef66018/2_portfolio.html\",\n                              ratio = \"16:9\")\n```\n\n::: {.cell-output-display}\n```{=html}\n<div class=\"shareagain\" style=\"min-width:300px;margin:1em auto;\" data-exeternal=\"1\">\n<iframe src=\"https://github.com/pjmcn83/casa0023_remote_sensing/blob/9b7de1c42cd4c8af1c0147f361ecd5d30ef66018/2_portfolio.html\" width=\"1600\" height=\"900\" style=\"border:2px solid currentColor;\" loading=\"lazy\" allowfullscreen></iframe>\n<script>fitvids('.shareagain', {players: 'iframe'});</script>\n</div>\n```\n:::\n:::\n",
+    "supporting": [
+      "2_portfolio_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"site_libs/fitvids-2.1.1/fitvids.min.js\"></script>\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
