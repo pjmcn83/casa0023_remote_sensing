@@ -62,6 +62,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 </head>
 
@@ -135,7 +138,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">3.1</span> Summary</a></li>
+  <li><a href="#sec-applications" id="toc-sec-applications" class="nav-link" data-scroll-target="#sec-applications"><span class="header-section-number">3.2</span> Applications - Effectiveness of relative and absolute correction</a>
+  <ul class="collapse">
+  <li><a href="#sec-bernando" id="toc-sec-bernando" class="nav-link" data-scroll-target="#sec-bernando"><span class="header-section-number">3.2.1</span> <span class="citation" data-cites="bernando2016">(<strong>bernando2016?</strong>)</span></a></li>
+  <li><a href="#sec-hu" id="toc-sec-hu" class="nav-link" data-scroll-target="#sec-hu"><span class="header-section-number">3.2.2</span> <span class="citation" data-cites="hu2011">(<strong>hu2011?</strong>)</span></a></li>
+  <li><a href="#sec-review" id="toc-sec-review" class="nav-link" data-scroll-target="#sec-review"><span class="header-section-number">3.2.3</span> Review</a></li>
+  </ul></li>
+  <li><a href="#sec-refection" id="toc-sec-refection" class="nav-link" data-scroll-target="#sec-refection"><span class="header-section-number">3.3</span> Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -157,11 +173,305 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This week we discussed how to build our online portfolio using Quarto (web page) and Xarigan (presentation). This also included how to host pages through GitHub.</p>
-<p>Our main task this week was to build a presentation in Xarigan about a specific remote sensing satelitte.</p>
-<p>I choose to create my presentation on the commercial satellite, Pleiades Neo, as I have a working knowledge of the imagery produced.</p>
+<section id="sec-summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">3.1</span> Summary</h2>
+<p>This week we delved deeper into remote sensing topics particularly data corrections, joining and enhancements. Lots of new terms were raised and some of the concepts were challenging to understand so it’s easiest to summarise these terms by building a <span class="quarto-unresolved-ref">?tbl-remote-sensing-glossary</span>. A lot of these terms could have entire lectures dedicated to them so I attempt to put these into a simple terms as possible. Due to the large number of terms considered, ChatGPT was used to provide an initial sweep of terms and sources, then these were fact checked and more detail added where necessary. Sources include NASA, ESA, USGS, Landsat Science, ESRI and many of the sources listed in the references.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-remote_sensing_glossary" class="anchored">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table&nbsp;3.1: Glossary of remote sensing terminology</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Term</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">RBV sensor</td>
+<td style="text-align: left;">Return Beam Vidicon - A camera-based sensor used on early Landsat missions for capturing panchromatic images.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MSS sensor</td>
+<td style="text-align: left;">Multispectral Scanner - The sensor onboard early Landsat satellites that captured data in several broad spectral bands.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Push broom</td>
+<td style="text-align: left;">A type of sensor that uses linear arrays to capture imagery as the platform moves forward, capturing a swath in one go.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Whisk broom</td>
+<td style="text-align: left;">A sensor that uses a mirror to scan the ground cross-track while capturing data one pixel at a time.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Scan Line Corrector</td>
+<td style="text-align: left;">Device that compensates for motion distortions in satellite imagery caused by satellite movement.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Geometric Correction</td>
+<td style="text-align: left;">The process of correcting spatial distortions in remote sensing imagery to align with map coordinates. This is a similar process to that of paper maps being digitised and corrected to align with digitial representation of the Earth. It involves the use of ground control points identified on the captured image and a "gold standard" image, then using transformation algorithms to align the image.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Atmospheric Correction</td>
+<td style="text-align: left;">Removing the atmospheric effects (e.g., scattering, absorption) from data values to retrieve the surface reflectance. It is always recommended to use atmospheric correction as this removes hazing from images.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dark Object Subtraction (DOS)</td>
+<td style="text-align: left;">A technique for atmospheric correction that finds the values of the darkest values and then subtracts the that from each pixel. Could also be termed hostogram adjustment.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pseudo-invariant features (PIF)</td>
+<td style="text-align: left;">Features assumed to have stable reflectance over time. Examples include water bodies, rocky surfaces. Can be used for atmospheric correction, sensor callibration and change detection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Atmospheric Radiative Transfer Models</td>
+<td style="text-align: left;">Mathematical models used to simulate the interaction of light with the atmosphere. Commercial software available for atmospheric correction includes ACORN (Atmospheirc CORrection Now), FLAASH (Fast Line-of-Sight Atmospheric Analysis of Spectral Hypercubes), QUAC (Quick Atmospheric Correction) and ATCOR (Atmospheric Correction of Reflectance). Free software: SMAC (Simplified Model for Atmospheric Correction and Orfeo Toolb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Empirical Line Correction</td>
+<td style="text-align: left;">A method of atmospheric correction using ground-truth measurements to directly relate image data to reflectance values.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Field Spectrometer</td>
+<td style="text-align: left;">Portable instruments used to measure the spectral reflectance of materials in situ.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Path Radiance</td>
+<td style="text-align: left;">The portion of radiance reflected by the atmosphere e.g. scattering.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Atmospheric attenuation</td>
+<td style="text-align: left;">The atmospheric absorption of electromagnetic radiation due to materials in the atmosphere (e.g. water vapour, dust)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Orthorectification or Topographic correction</td>
+<td style="text-align: left;">Correcting distortions in imagery, making the pixels appear at nadair</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nadir / off-nadir</td>
+<td style="text-align: left;">Nadir: directly beneath a sensor. Off-nadir: any angle except directly beneath the sensor.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Solar Zentih</td>
+<td style="text-align: left;">The angle between the sun and the vertical direction at a given location.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Solar Azimuth</td>
+<td style="text-align: left;">The angle of the sun, measured clockwise from the north. North = 0°, East = 90° at sunrise and 270° at sunset</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Radiometric Callibration</td>
+<td style="text-align: left;">The process of converting the captured Digital Number to a radiance or reflectance values.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Digital Number (DN)</td>
+<td style="text-align: left;">The raw output value (with no units) recorded by a sensor, wuth each number indicating a range of colours, e.g. an 8 bit image has value 0 (black) to 255 (white). These represent the radiance or reflectance.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Radiance</td>
+<td style="text-align: left;">Radiation that is leaving the Earth</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Surface Reflectance</td>
+<td style="text-align: left;">The fraction of incoming light that a surface reflects, corrected to account for atmospheric effects and light source.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Irradiance</td>
+<td style="text-align: left;">Radiation that is reaching the Earth such as from the Sun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mosiacking</td>
+<td style="text-align: left;">The process of combining multiple images into a single and seamless image.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Contrast Enhancement</td>
+<td style="text-align: left;">Techniques used to improve image visibility by increasing the contrast between features.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Band ratioing</td>
+<td style="text-align: left;">Dividing the pixel values of one spectral band by another to highlight specific features (e.g., vegetation indices).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Filtering</td>
+<td style="text-align: left;">The process of enhancing or suppressing specific spatial frequencies in an image.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Edge enhancement</td>
+<td style="text-align: left;">Techniques to highlight boundaries and transitions in imagery.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Embossing</td>
+<td style="text-align: left;">An image processing technique that simulates 3D surface relief.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Principal Comonent Analysis (PCA)</td>
+<td style="text-align: left;">A statistical technique used to transform multi-spectral data by reducing the dimensions of the data whilst retaining the key information.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Texture</td>
+<td style="text-align: left;">The spatial variation in pixel values, representing surface roughness or pattern.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Image fusion</td>
+<td style="text-align: left;">A subset of data fusion that focuses on merging images to improve resoluton. This can be used to combine certain Landsat and Sentinel images into a single working image.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pan Sharpen</td>
+<td style="text-align: left;">A technique used to enhance the spatial resolution of multispectral images by combining them with a high resolution panchromatic image.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Data fusion</td>
+<td style="text-align: left;">The process of combining data from multiple sources with the goal of improving accuracy and usefulness.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
+</div>
+</div>
+<p>Another key point raised throughout the lecture was that regression plays a key part in many of the corrections that we looked into. This links back to the <span class="citation" data-cites="wk1-applications">(<a href="references.html#ref-wk1-applications" role="doc-biblioref"><strong>wk1-applications?</strong></a>)</span> discussion were I initially found it difficult to understand some of the comparisons that were being made. So this lecture really helped to consolidate those comparison by clearly explaining the important role that regression plays in remote sensing.</p>
+</section>
+<section id="sec-applications" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-applications"><span class="header-section-number">3.2</span> Applications - Effectiveness of relative and absolute correction</h2>
+<p>There is almost endless possibilities to expand on in the topics covered this week so it’s a difficult job to focus on any one area. However, in week 1 I said that I’d like to investigate was atmospheric scattering therefore I will focus this section on atmospheric correction but also comparing against radiometric normalisation. This specifically looks at the differences and inaccuracy of <strong>relative</strong> and <strong>absolute</strong> correction.</p>
+<section id="sec-bernando" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-bernando"><span class="header-section-number">3.2.1</span> <span class="citation" data-cites="bernando2016">(<a href="references.html#ref-bernando2016" role="doc-biblioref"><strong>bernando2016?</strong></a>)</span></h3>
+<p>The availability of absolute atmospheric correction inputs can be generalised over an area or season leading the potential accuracy issues. This is why <span class="citation" data-cites="bernardo2016">(<a href="references.html#ref-bernardo2016" role="doc-biblioref"><strong>bernardo2016?</strong></a>)</span> investigated the effectiveness of an absolute atmospheric correction against a relative radiometric normalisation. Their study was specifically to estimate total suspended matter (TSM) concentrations in the Barra Bonita Hydroelectric Reservior, São Paulo however the general methodology could potentially be applied to other areas.</p>
+<p>The reflectance errors were measured compared by assessing root mean squared error (RMSE) and the mean absolute percent error (MAPE). With a comparison made agaisnt the FLAASH (absolute method) against IRMAD - iteratively reweighted multivariate alteration detection (relative method) correction methods.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-refectance-errors" class="anchored">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table&nbsp;3.2: Reflectance errors from FLAASH and IRMAD corrections <span class="citation" data-cites="bernando2016">(<a href="references.html#ref-bernando2016" role="doc-biblioref"><strong>bernando2016?</strong></a>)</span></caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">OLI band</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">RMSE (%) FLAASH</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">RMSE (%) IRMAD</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">MAPE (%) FLAASH</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">MAPE (%) IRMAD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Coastal (440nm)</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">133.45</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">31.22</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">131.45</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">25.82</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Blue (480nm)</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">53.70</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">25.06</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">51.73</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">21.84</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Green (560nm)</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">11.50</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">12.29</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">9.61</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">9.46</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Red (655nm)</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">34.45</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">20.03</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">33.38</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">16.98</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NIR (865nm)</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">88.29</td>
+<td style="text-align: right; background-color: rgba(245, 245, 245, 255) !important;">49.97</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">81.71</td>
+<td style="text-align: right; background-color: rgba(211, 211, 211, 255) !important;">45.37</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+<p>The findings clearly show greater levels in inaccuracy from the absolute method (FLAASH) in both methods of comparison across nearly all bands. The only exception is the Green band’s RMSE percentage using the relative method (IRMAD). The percentage difference in correction methods for the coastal band of 131-133% (absolute) versus 25-31% (relative) is a staggering figure. It would have been really interesting to see other examples of this analysis to see if this is a general trend or just an anomaly for the area.</p>
+<p>The authors do state various limitations to their study including the assumptions made in each methods potentially leading to errors themselves. This could be a good area for further investigations but what I’d really like to see is a similar paper comparing these methods in various locations to identify whether this is a general trend.</p>
+</section>
+<section id="sec-hu" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-hu"><span class="header-section-number">3.2.2</span> <span class="citation" data-cites="hu2011">(<a href="references.html#ref-hu2011" role="doc-biblioref"><strong>hu2011?</strong></a>)</span></h3>
+<p>We have seen one example of a comparison between absolute and relative corrections but we shouldn’t just accept one study’s conclusion. We need to be more critical and if we can’t question findings ourselves through our own study then we can use other articles to help challenge or support these findings.</p>
+<p>So I have picked a similar study with a similar methodology in <span class="citation" data-cites="hu2011">(<a href="references.html#ref-hu2011" role="doc-biblioref"><strong>hu2011?</strong></a>)</span>. I will focus on the key differences in the methodology but first let’s summarise the similarities:</p>
+<ul>
+<li>compares using landsat images</li>
+<li>compares a single study area using time series images</li>
+<li>uses FLAASH for absolute atmospheric correction</li>
+<li>uses multivariate alternative detection (MAD) for relative radiometric normalisation</li>
+</ul>
+<p>Although the use of MAD is similar to <span class="citation" data-cites="bernando2016">(<a href="references.html#ref-bernando2016" role="doc-biblioref"><strong>bernando2016?</strong></a>)</span>’s technique of iteratively reweighted MAD (IRMAD), it provides a more basic detection of change as it is a one-pass approach and does not iteratively refine the results, also IRMAD are much less noisy than MAD(<span class="citation" data-cites="nielson2005">(<a href="references.html#ref-nielson2005" role="doc-biblioref"><strong>nielson2005?</strong></a>)</span>, <span class="citation" data-cites="nielson2007">(<a href="references.html#ref-nielson2007" role="doc-biblioref"><strong>nielson2007?</strong></a>)</span>). There is also a third approach, regularised IRMAD which can perform even better but this was not part of the studies being compared.</p>
+<p>Despite the differences in the relative correction calculations we can still review the results to help our comparison. <span class="citation" data-cites="hu2011">(<a href="references.html#ref-hu2011" role="doc-biblioref"><strong>hu2011?</strong></a>)</span> used regression to assess the difference between absolute and relative corrections and the findings can be reviewed through the standard deviation results of each method.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-std_comparison" class="anchored">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table&nbsp;3.3: Standard Deviation of the difference in each band for relative normalisation against atmospheric correction</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Band</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">Band 1</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">Band 2</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">Band 3</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">Band 4</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">Band 5</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-weight: bold;">Band 7</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STD of Relative Normalization</td>
+<td style="text-align: right;">0.0013</td>
+<td style="text-align: right;">0.0018</td>
+<td style="text-align: right;">0.0017</td>
+<td style="text-align: right;">0.0045</td>
+<td style="text-align: right;">0.0066</td>
+<td style="text-align: right;">0.0047</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STD of Atmospheric Correction</td>
+<td style="text-align: right;">0.0025</td>
+<td style="text-align: right;">0.0030</td>
+<td style="text-align: right;">0.0033</td>
+<td style="text-align: right;">0.0086</td>
+<td style="text-align: right;">0.0083</td>
+<td style="text-align: right;">0.0074</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+<p>The overall results show that both methods reduce radiometric distortion, but relative normalisation corrects it more effectively. This is shown by the lower standard deviations of relative normalisation versus atmospheric correction across all bands (<span class="quarto-unresolved-ref">?tbl-std-comparison</span>).</p>
+</section>
+<section id="sec-review" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="sec-review"><span class="header-section-number">3.2.3</span> Review</h3>
+<p>I suspect that whilst the papers talk about absolute corrections having high percentage error in certain bands that this could be specific to the location of the study and the assumptions made throughout. There are so many variables at play that it would be highly improbable to produce a study that could feasible review all of these aspects.</p>
+<p>In an ideal world we would be able to say exactly what corrections and enhancements to apply to an image to provide the optimal output. However that is just not possible, if we think about the sheer amount of variables, including atmospheric conditions, topological factors, sensor differences, then we can begin to see why there is no simple set of tools for analysis.</p>
+<p>This is evident in both the papers discussed and have previously seen in other papers. It could appear that the scope is quite limited as they focus on very small samples (Bernando - Barra Bonita Hydroelectric Reservior area, São Paulo; Hu et al - Yellow River Source, Eastern Tibet) for their analysis (previously discussed in week 1). However if we consider this from a technical point of view then simply the amount of computational power required to process much larger samples is very restrictive and time-consuming.</p>
+</section>
+</section>
+<section id="sec-refection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-refection"><span class="header-section-number">3.3</span> Reflection</h2>
+<p>Before reflecting on some of the more technical aspects discussed I think it’s first important to highlight the role that Virginia Norwood played in modern remote sensing. This was covered right at the beginning of the lecture and is quite an interesting story. A whole review could written about this but I think the fact the Virginia Norwood is known as the “mother of Landsat” says a great deal, and the full story of her life can be found in multiple articles including <span class="citation" data-cites="mcclain2023">(<a href="references.html#ref-mcclain2023" role="doc-biblioref"><strong>mcclain2023?</strong></a>)</span> and <span class="citation" data-cites="inventorshallofhame2025">(<a href="references.html#ref-inventorshallofhame2025" role="doc-biblioref"><strong>inventorshallofhame2025?</strong></a>)</span>.</p>
+<p>So back to the reflection, this week was definitely challenging, particularly with the amount of different terms, ideas and formulas raised. However when I really began to delve deeper into these concepts and particularly those discussed in <a href="#sec-applications"><span>Section&nbsp;3.2</span></a> they really become clearer. You can really start to see the benefit these corrections and enhancements can have as part of wider studies.</p>
+<p>As mentioned previously I’m looking forward to putting this ideas into practice through the Earth Observation Data Hub pilot scheme that Camden will soon have access to. I want to explore what data we will get access to and can finally understand the differences between products and particular what information can be derived from different bands. This will be a big improvement in the previous EO work that I’ve done which involved blindly following guides to try to get a result that seems similar.</p>
+<p>One final note, even though it’s good to understand the processing required and it really helped boost my overall understanding of the challenges with remote sensing data, I’m so glad that most of the processing is already built into packages or in the Analysis Ready Data.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

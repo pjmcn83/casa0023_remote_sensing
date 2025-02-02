@@ -6,7 +6,7 @@ As a relative newbie to Remote Sensing there was so much new information this we
 
 ![Introduction to Remote Sensing Mind map](images/RS_intro_mindmap.png){#fig-rsintro}
 
-There is so much information that could be discussed here but I'd like to focus on the bands. Images produced at different bands are what makes up the creation of useful and relevant images. Personally I have previously attempted to use earth observation data without understanding the differences between the bands and this made the task at hand incredibly difficult. So an understanding of the what bands relate to which information on the ground is key to the practical implementation of remote sensing.
+There is so much information that could be discussed here but I'd like to focus on the bands. Images produced at different bands are what makes up the creation of useful and relevant images. Personally I have previously attempted to use earth observation data without understanding the differences between the bands and this made the task at hand incredibly difficult and mainly involved mindlessly following guides and videos just to get a semi-readable output. So this weeks introduction to remote sensing really helped me to understand what bands relate to which information on the ground. And importantly how the different bands can be combined depending on the purpose of any analysis.
 
 ## Application {#sec-application}
 
@@ -41,7 +41,6 @@ comp <- read.csv(here("tables", "landsat_sentinel_comparison.csv"), check.names 
 #| tbl-cap: "Summary comparison of basic Landsat-8 and Sentinel-2 specifications"
 comp
 ```
-
 
 Six sites across the Earth were chosen to compare Sentinel/Landsat images, the sites were chosen to provide a mix of land cover types and climatic conditions, the comparison images were taken on the same day to build as close a comparison as possible. Correlation and regression coefficients were then calculated across the bands for the study areas.
 
