@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: _book
 
 book:
   title: "CASA0023 Remote Sensing - Learning Diary"
@@ -12,7 +13,9 @@ book:
     - 3_Data_Corrections.qmd
     - references.qmd
 
-bibliography: pleiades_references.bib
+bibliography: 
+  - references.bib
+  - pleiades_references.bib
 
 format:
   html:
@@ -20,9 +23,5 @@ format:
     lightbox: true
   pdf:
     documentclass: scrreprt
-    
-project:
-  type: book
-  output-dir: _book
     
 editor: visual

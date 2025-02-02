@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -146,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-applications" id="toc-sec-applications" class="nav-link" data-scroll-target="#sec-applications"><span class="header-section-number">3.2</span> Applications - Effectiveness of relative and absolute correction</a>
   <ul class="collapse">
   <li><a href="#sec-bernando" id="toc-sec-bernando" class="nav-link" data-scroll-target="#sec-bernando"><span class="header-section-number">3.2.1</span> <span class="citation" data-cites="bernando2016">(<strong>bernando2016?</strong>)</span></a></li>
-  <li><a href="#sec-hu" id="toc-sec-hu" class="nav-link" data-scroll-target="#sec-hu"><span class="header-section-number">3.2.2</span> <span class="citation" data-cites="hu2011">(<strong>hu2011?</strong>)</span></a></li>
+  <li><a href="#sec-hu" id="toc-sec-hu" class="nav-link" data-scroll-target="#sec-hu"><span class="header-section-number">3.2.2</span> <span class="citation" data-cites="hu2011">Hu et al. (2011)</span></a></li>
   <li><a href="#sec-review" id="toc-sec-review" class="nav-link" data-scroll-target="#sec-review"><span class="header-section-number">3.2.3</span> Review</a></li>
   </ul></li>
   <li><a href="#sec-refection" id="toc-sec-refection" class="nav-link" data-scroll-target="#sec-refection"><span class="header-section-number">3.3</span> Reflection</a></li>
@@ -338,7 +357,7 @@ ul.task-list li input[type="checkbox"] {
 <p>There is almost endless possibilities to expand on in the topics covered this week so it’s a difficult job to focus on any one area. However, in week 1 I said that I’d like to investigate was atmospheric scattering therefore I will focus this section on atmospheric correction but also comparing against radiometric normalisation. This specifically looks at the differences and inaccuracy of <strong>relative</strong> and <strong>absolute</strong> correction.</p>
 <section id="sec-bernando" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-bernando"><span class="header-section-number">3.2.1</span> <span class="citation" data-cites="bernando2016">(<a href="references.html#ref-bernando2016" role="doc-biblioref"><strong>bernando2016?</strong></a>)</span></h3>
-<p>The availability of absolute atmospheric correction inputs can be generalised over an area or season leading the potential accuracy issues. This is why <span class="citation" data-cites="bernardo2016">(<a href="references.html#ref-bernardo2016" role="doc-biblioref"><strong>bernardo2016?</strong></a>)</span> investigated the effectiveness of an absolute atmospheric correction against a relative radiometric normalisation. Their study was specifically to estimate total suspended matter (TSM) concentrations in the Barra Bonita Hydroelectric Reservior, São Paulo however the general methodology could potentially be applied to other areas.</p>
+<p>The availability of absolute atmospheric correction inputs can be generalised over an area or season leading the potential accuracy issues. This is why <span class="citation" data-cites="bernardo2016">Bernardo et al. (<a href="references.html#ref-bernardo2016" role="doc-biblioref">2016</a>)</span> investigated the effectiveness of an absolute atmospheric correction against a relative radiometric normalisation. Their study was specifically to estimate total suspended matter (TSM) concentrations in the Barra Bonita Hydroelectric Reservior, São Paulo however the general methodology could potentially be applied to other areas.</p>
 <p>The reflectance errors were measured compared by assessing root mean squared error (RMSE) and the mean absolute percent error (MAPE). With a comparison made agaisnt the FLAASH (absolute method) against IRMAD - iteratively reweighted multivariate alteration detection (relative method) correction methods.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -401,9 +420,9 @@ ul.task-list li input[type="checkbox"] {
 <p>The authors do state various limitations to their study including the assumptions made in each methods potentially leading to errors themselves. This could be a good area for further investigations but what I’d really like to see is a similar paper comparing these methods in various locations to identify whether this is a general trend.</p>
 </section>
 <section id="sec-hu" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-hu"><span class="header-section-number">3.2.2</span> <span class="citation" data-cites="hu2011">(<a href="references.html#ref-hu2011" role="doc-biblioref"><strong>hu2011?</strong></a>)</span></h3>
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-hu"><span class="header-section-number">3.2.2</span> <span class="citation" data-cites="hu2011">Hu et al. (<a href="references.html#ref-hu2011" role="doc-biblioref">2011</a>)</span></h3>
 <p>We have seen one example of a comparison between absolute and relative corrections but we shouldn’t just accept one study’s conclusion. We need to be more critical and if we can’t question findings ourselves through our own study then we can use other articles to help challenge or support these findings.</p>
-<p>So I have picked a similar study with a similar methodology in <span class="citation" data-cites="hu2011">(<a href="references.html#ref-hu2011" role="doc-biblioref"><strong>hu2011?</strong></a>)</span>. I will focus on the key differences in the methodology but first let’s summarise the similarities:</p>
+<p>So I have picked a similar study with a similar methodology in <span class="citation" data-cites="hu2011">Hu et al. (<a href="references.html#ref-hu2011" role="doc-biblioref">2011</a>)</span>. I will focus on the key differences in the methodology but first let’s summarise the similarities:</p>
 <ul>
 <li>compares using landsat images</li>
 <li>compares a single study area using time series images</li>
@@ -411,7 +430,7 @@ ul.task-list li input[type="checkbox"] {
 <li>uses multivariate alternative detection (MAD) for relative radiometric normalisation</li>
 </ul>
 <p>Although the use of MAD is similar to <span class="citation" data-cites="bernando2016">(<a href="references.html#ref-bernando2016" role="doc-biblioref"><strong>bernando2016?</strong></a>)</span>’s technique of iteratively reweighted MAD (IRMAD), it provides a more basic detection of change as it is a one-pass approach and does not iteratively refine the results, also IRMAD are much less noisy than MAD(<span class="citation" data-cites="nielson2005">(<a href="references.html#ref-nielson2005" role="doc-biblioref"><strong>nielson2005?</strong></a>)</span>, <span class="citation" data-cites="nielson2007">(<a href="references.html#ref-nielson2007" role="doc-biblioref"><strong>nielson2007?</strong></a>)</span>). There is also a third approach, regularised IRMAD which can perform even better but this was not part of the studies being compared.</p>
-<p>Despite the differences in the relative correction calculations we can still review the results to help our comparison. <span class="citation" data-cites="hu2011">(<a href="references.html#ref-hu2011" role="doc-biblioref"><strong>hu2011?</strong></a>)</span> used regression to assess the difference between absolute and relative corrections and the findings can be reviewed through the standard deviation results of each method.</p>
+<p>Despite the differences in the relative correction calculations we can still review the results to help our comparison. <span class="citation" data-cites="hu2011">Hu et al. (<a href="references.html#ref-hu2011" role="doc-biblioref">2011</a>)</span> used regression to assess the difference between absolute and relative corrections and the findings can be reviewed through the standard deviation results of each method.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-std_comparison" class="anchored">
@@ -465,12 +484,23 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-refection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="sec-refection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>Before reflecting on some of the more technical aspects discussed I think it’s first important to highlight the role that Virginia Norwood played in modern remote sensing. This was covered right at the beginning of the lecture and is quite an interesting story. A whole review could written about this but I think the fact the Virginia Norwood is known as the “mother of Landsat” says a great deal, and the full story of her life can be found in multiple articles including <span class="citation" data-cites="mcclain2023">(<a href="references.html#ref-mcclain2023" role="doc-biblioref"><strong>mcclain2023?</strong></a>)</span> and <span class="citation" data-cites="inventorshallofhame2025">(<a href="references.html#ref-inventorshallofhame2025" role="doc-biblioref"><strong>inventorshallofhame2025?</strong></a>)</span>.</p>
+<p>Before reflecting on some of the more technical aspects discussed I think it’s first important to highlight the role that Virginia Norwood played in modern remote sensing. This was covered right at the beginning of the lecture and is quite an interesting story. A whole review could written about this but I think the fact the Virginia Norwood is known as the “mother of Landsat” says a great deal, and the full story of her life can be found in multiple articles including <span class="citation" data-cites="mcclain2023">McClain (<a href="references.html#ref-mcclain2023" role="doc-biblioref">2023</a>)</span> and <span class="citation" data-cites="inventorshallofhame2025">(<a href="references.html#ref-inventorshallofhame2025" role="doc-biblioref"><strong>inventorshallofhame2025?</strong></a>)</span>.</p>
 <p>So back to the reflection, this week was definitely challenging, particularly with the amount of different terms, ideas and formulas raised. However when I really began to delve deeper into these concepts and particularly those discussed in <a href="#sec-applications"><span>Section&nbsp;3.2</span></a> they really become clearer. You can really start to see the benefit these corrections and enhancements can have as part of wider studies.</p>
 <p>As mentioned previously I’m looking forward to putting this ideas into practice through the Earth Observation Data Hub pilot scheme that Camden will soon have access to. I want to explore what data we will get access to and can finally understand the differences between products and particular what information can be derived from different bands. This will be a big improvement in the previous EO work that I’ve done which involved blindly following guides to try to get a result that seems similar.</p>
 <p>One final note, even though it’s good to understand the processing required and it really helped boost my overall understanding of the challenges with remote sensing data, I’m so glad that most of the processing is already built into packages or in the Analysis Ready Data.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-bernardo2016" class="csl-entry" role="listitem">
+Bernardo, Nariane, Fernanda Watanabe, Thanan Rodrigues, and Enner Alcântara. 2016. <span>“An Investigation into the Effectiveness of Relative and Absolute Atmospheric Correction for Retrieval the <span>TSM</span> Concentration in Inland Waters.”</span> <em>Modeling Earth Systems and Environment</em> 2 (3): 114. <a href="https://doi.org/10.1007/s40808-016-0176-9">https://doi.org/10.1007/s40808-016-0176-9</a>.
+</div>
+<div id="ref-hu2011" class="csl-entry" role="listitem">
+Hu, Yong, Liangyun Liu, Lingling Liu, and Quanjun Jiao. 2011. <span>“Comparison of Absolute and Relative Radiometric Normalization Use <span>Landsat</span> Time Series Images.”</span> In <em><span>MIPPR</span> 2011: <span>Remote</span> Sensing Image Processing, Geographic Information Systems, and Other Applications</em>, edited by Faxiong Zhang and Faxiong Zhang, 8006:800616. <span>SPIE / International Society for Optics and Photonics</span>. <a href="https://doi.org/10.1117/12.902076">https://doi.org/10.1117/12.902076</a>.
+</div>
+<div id="ref-mcclain2023" class="csl-entry" role="listitem">
+McClain, Dylan Loeb. 2023. <span>“Virginia <span>Norwood</span>, <span>‘<span>Mother</span>’</span> of <span>Satellite Imaging Systems</span>, <span>Dies</span> at 96.”</span> <em>The New York Times: Science</em>, April 12, 2023. <a href="https://www.nytimes.com/2023/04/12/science/space/virginia-norwood-dead.html">https://www.nytimes.com/2023/04/12/science/space/virginia-norwood-dead.html</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
