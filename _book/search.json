@@ -123,7 +123,7 @@
     "href": "2_portfolio.html",
     "title": "2  Wk 2 Portfolio",
     "section": "",
-    "text": "This week we discussed how to build our online portfolio using Quarto (web page) and Xarigan (presentation). This also included how to host pages through GitHub.\nOur main task this week was to build a presentation in Xarigan about a specific remote sensing satelitte.\nI choose to create my presentation on the commercial satellite, Pleiades Neo, as I have a working knowledge of the imagery produced.\n\nxaringanExtra::embed_xaringan(url = \"https://github.com/pjmcn83/casa0023_remote_sensing/blob/585d34958ad4a565c9befec227e2597271224d42/wk2pres.rmd\",\n                              ratio = \"16:9\")"
+    "text": "This week we discussed how to build our online portfolio using Quarto (web page) and Xarigan (presentation). This also included how to host pages through GitHub.\nOur main task this week was to build a presentation in Xarigan about a specific remote sensing satelitte.\nI choose to create my presentation on the commercial satellite, Pleiades Neo, as I have a working knowledge of the imagery produced.\n\nxaringanExtra::embed_xaringan(\n  url = \"https://pjmcn83.github.io/casa0023_remote_sensing/wk2pres.html\",\n  ratio = \"16:9\"\n)"
   },
   {
     "objectID": "3_Data_Corrections.html#summary",
